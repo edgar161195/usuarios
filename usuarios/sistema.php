@@ -12,6 +12,10 @@
   $body = array('contenedor'=>array('uno'=>'<p>Usuario válido</p>',
                                     'dos'=>'<a href="cerrar.php">Cerrar sesión</a>'));
   
+  $usuarios=LIGA('usuarios');
+  $columnas=('id,nombre,fecha');
+  HTML::tabla($usuarios,'usuarios', $columnas);
+  
   HTML::cuerpo($body);
   
   HTML::pie();
